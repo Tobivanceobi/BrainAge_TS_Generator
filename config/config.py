@@ -15,11 +15,13 @@ flatten = True
 # subjects to ignore (leave default, because subjects are missing in the main dataset)
 bad_subj = [8, 15, 139, 148, 237, 256, 295, 362, 475, 485, 521, 575, 584, 592, 610, 619, 633, 680, 693, 859, 864, 899,
             944, 969, 974, 1008, 1062, 1154]
-# derive the mean over features
+# derive the mean over features (If None, then no splits are made)
 mean_features = True
 
+# how many subject splits should be made
 split_epochs = 5
 
+# comment a frequency band if you want to ignore it
 freq_bands = {
     'delta': [0.5, 4],
     'theta': [4, 8],
@@ -28,24 +30,25 @@ freq_bands = {
     'whole_spec': [0.5, 30]
 }
 
+# comment a methode if you want to ignore it
 methods = [
-    # 'variance',
-    # 'std',
-    # 'ptp_amp',
+    'variance',
+    'std',
+    'ptp_amp',
     # 'wavelet_coef_energy',
-    # 'quantile',
+    'quantile',
     'pow_freq_bands',
     # 'line_length',
     # 'zero_crossings',
     # 'skewness',
     # 'kurtosis',
     # 'spect_entropy',
-    # 'higuchi_fd',
+    'higuchi_fd',
     # 'samp_entropy',
     # 'mean',
     # 'hjorth_complexity',
     # 'hurst_exp',
-    # 'hjorth_mobility',
+    'hjorth_mobility',
     # 'hjorth_mobility_spect',
     # 'hjorth_complexity_spect',
 ]

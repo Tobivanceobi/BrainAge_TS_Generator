@@ -84,7 +84,7 @@ class Subject:
         self.age = targets[self.subject_id - 1][1]
         return self.age
 
-    def load_subject_from_file(self):
+    def load_subject_from_file(self) -> dict:
         """
         Loads the subject data from the main data set.
         :return: The Subject data of the main data set.
@@ -98,7 +98,7 @@ class Subject:
         except Exception as ex:
             print("Error during unpickling object (Possibly unsupported):", ex)
 
-    def get_subject_fname(self):
+    def get_subject_fname(self) -> str:
         """
         Creates the subjects filename in the main data set.
         :return: Subjects file name in the main data set.

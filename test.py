@@ -15,7 +15,7 @@ def load_object(fname):
         print("Error during unpickling object (Possibly unsupported):", ex)
 
 
-data = load_object('./output/training_sets/Set_5/training_set')
+data = load_object('./output/training_sets/Set_6/training_set')
 print(f"Subjects: {len(data['x'])}, Targets: {len(data['y'])}")
 print(f"Subject: {len(data['x'][0])}")
 print(data['x'][0])

@@ -48,7 +48,7 @@ if __name__ == '__main__':
                 # pick EC and EO data for 'sub subjects'
                 training_set['x'].append(np.concatenate([x_i[0][group], x_i[1][group]]))
 
-                # ass the subject age to als splits
+                # add the subject age to als splits
                 training_set['y'].append(subj.age)
 
                 # add the subject ID as group for all splits
@@ -68,8 +68,8 @@ if __name__ == '__main__':
         training_set['x'] = scaler.fit_transform(training_set['x'])
 
     # create a new dir_name for set to save
-    set_id = len([x for x in os.walk('./output/training_sets/Set_7')]) - 1
-    new_set_dir_path = './output/training_sets/Set_7/' + 'Set_' + str(set_id)
+    set_id = len([x for x in os.walk('./output/training_sets')]) - 1
+    new_set_dir_path = './output/training_sets/' + 'Set_' + str(set_id)
 
     if not os.path.isdir(new_set_dir_path):
         # create the directory and save the training set
